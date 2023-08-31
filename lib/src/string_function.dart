@@ -1,4 +1,4 @@
-// Validate IMEI (International Mobile Equipment Identity) number.
+/// Validate IMEI (International Mobile Equipment Identity) number.
 String? validateIMEI(String? value) {
   // Check if the value is null or empty
   if (value == null || value.isEmpty) {
@@ -36,7 +36,7 @@ String? validateIMEI(String? value) {
   return null;
 }
 
-// Validate ISBN (International Standard Book Number).
+/// Validate ISBN (International Standard Book Number).
 String? validateISBN(String? value) {
   // Check if the value is null or empty
   if (value == null || value.isEmpty) {
@@ -100,7 +100,7 @@ String? validateISBN(String? value) {
   return null;
 }
 
-// Validate latitude and longitude coordinates.
+/// Validate latitude and longitude coordinates.
 String? validateLatitudeLongitude(String? latitude, String? longitude) {
   // Check if latitude or longitude is null or empty
   if (latitude == null ||
@@ -139,7 +139,7 @@ String? validateLatitudeLongitude(String? latitude, String? longitude) {
   return null;
 }
 
-// Validate MAC (Media Access Control) address.
+/// Validate MAC (Media Access Control) address.
 String? validateMACAddress(String? value) {
   // Check if the MAC address is null or empty
   if (value == null || value.isEmpty) {
@@ -160,7 +160,7 @@ String? validateMACAddress(String? value) {
   return null;
 }
 
-// Validate MIME (Multipurpose Internet Mail Extensions) type.
+/// Validate MIME (Multipurpose Internet Mail Extensions) type.
 String? validateMimeType(String? value) {
   // Check if the MIME type is null or empty
   if (value == null || value.isEmpty) {

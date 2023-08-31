@@ -1,4 +1,6 @@
-// Validate Required Input
+/// Validates that a required input is not null or empty.
+///
+/// Returns an error message if the input is empty or null, otherwise returns null.
 String? validateInput(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -9,7 +11,10 @@ String? validateInput(String? value) {
   return null;
 }
 
-// Validate Email Format
+/// Validates the format of an email address.
+///
+/// Returns an error message if the email is empty, null, or doesn't match the email format,
+/// otherwise returns null.
 String? validateEmail(String? value) {
   // The regular expression pattern to match email addresses
   RegExp regex = RegExp(
@@ -31,7 +36,10 @@ String? validateEmail(String? value) {
   return null;
 }
 
-// Validate Password Strength
+/// Validates the strength of a password.
+///
+/// Returns an error message if the password is empty, null, or doesn't meet the password strength criteria,
+/// otherwise returns null.
 String? validatePassword(String? password) {
   const pattern =
       r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,}$';
@@ -50,7 +58,10 @@ String? validatePassword(String? password) {
   return null;
 }
 
-// Validate Confirm Password
+/// Validates that a password matches a confirm password.
+///
+/// Returns an error message if either password or confirm password is null or empty,
+/// or if they don't match, otherwise returns null.
 String? validateConfirmPassword(String? password, String? confirmPassword) {
   // Check if both password and confirm password are not null and not empty
   if (password == null ||

@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-// Function to check if the given email is in a valid format.
+/// Function to check if the given email is in a valid format.
 bool isValidateEmail(String email) {
   // Regular expression pattern to validate the email format.
   // The pattern checks for the following format:
@@ -19,7 +19,7 @@ bool isValidateEmail(String email) {
   return regex.hasMatch(email);
 }
 
-// Function to check if the given password is in a valid format.
+/// Function to check if the given password is in a valid format.
 bool isValidatePassword(String password) {
   // Regular expression pattern to validate the password format.
   // The pattern checks for the following requirements:
@@ -39,7 +39,7 @@ bool isValidatePassword(String password) {
   return regex.hasMatch(password);
 }
 
-// Function to check if the given phone number is in a valid format.
+/// Function to check if the given phone number is in a valid format.
 bool isValidatePhoneNumber(String phoneNumber) {
   // Regular expression pattern to validate the phone number format.
   // The pattern checks for the following requirements:
@@ -55,7 +55,7 @@ bool isValidatePhoneNumber(String phoneNumber) {
   return regex.hasMatch(phoneNumber);
 }
 
-// Function to check if the given phone number is a valid Indian mobile number.
+/// Function to check if the given phone number is a valid Indian mobile number.
 bool isValidateIndianPhoneNumber(String? phoneNumber) {
   // If the phoneNumber is null, return false indicating invalid input.
   if (phoneNumber == null) return false;
@@ -75,7 +75,7 @@ bool isValidateIndianPhoneNumber(String? phoneNumber) {
   return true;
 }
 
-// Function to check if the given number is a positive number (including decimals).
+/// Function to check if the given number is a positive number (including decimals).
 bool isValidatePositiveNumber(String number) {
   // Regular expression pattern to validate positive numbers (including decimals).
   // The pattern checks for the following:
@@ -90,7 +90,7 @@ bool isValidatePositiveNumber(String number) {
   return regex.hasMatch(number);
 }
 
-// Function to check if the given string is a valid hexadecimal color code.
+/// Function to check if the given string is a valid hexadecimal color code.
 bool isValidateHexColor(String colorCode) {
   // Regular expression pattern to validate hexadecimal color codes.
   // The pattern checks for the following:
@@ -105,7 +105,7 @@ bool isValidateHexColor(String colorCode) {
   return regex.hasMatch(colorCode);
 }
 
-// Function to check if the given string is a valid date in the specified format.
+/// Function to check if the given string is a valid date in the specified format.
 bool isValidateDateFormat(String date, {String format = 'yyyy-MM-dd'}) {
   try {
     // Use the DateTime.parse method to parse the input date string.
@@ -118,7 +118,7 @@ bool isValidateDateFormat(String date, {String format = 'yyyy-MM-dd'}) {
   }
 }
 
-// Function to check if the given string is a valid credit card number.
+/// Function to check if the given string is a valid credit card number.
 bool isValidateCreditCard(String cardNumber) {
   // Regular expression pattern to validate credit card numbers.
   // The pattern checks for the following:
@@ -132,7 +132,7 @@ bool isValidateCreditCard(String cardNumber) {
   return regex.hasMatch(cardNumber);
 }
 
-// Function to check if the given string is a valid US postal code.
+/// Function to check if the given string is a valid US postal code.
 bool isValidateUSPostalCode(String postalCode) {
   // Regular expression pattern to validate US postal codes.
   // The pattern checks for the following:
@@ -147,7 +147,7 @@ bool isValidateUSPostalCode(String postalCode) {
   return regex.hasMatch(postalCode);
 }
 
-// Function to check if the given string is a valid credit card expiry date.
+/// Function to check if the given string is a valid credit card expiry date.
 bool isValidateCreditCardExpiry(String expiryDate) {
   // Regular expression pattern to validate credit card expiry dates.
   // The pattern checks for the following:
@@ -163,7 +163,7 @@ bool isValidateCreditCardExpiry(String expiryDate) {
   return regex.hasMatch(expiryDate);
 }
 
-// Function to check if the given string is a valid IP address (IPv4).
+/// Function to check if the given string is a valid IP address (IPv4).
 bool isValidateIPAddress(String ipAddress) {
   // Regular expression pattern to validate IP addresses (IPv4).
   // The pattern checks for the following:
@@ -182,7 +182,7 @@ bool isValidateIPAddress(String ipAddress) {
   return regex.hasMatch(ipAddress);
 }
 
-// Function to check if the given string is a valid username.
+/// Function to check if the given string is a valid username.
 bool isValidateUsername(String username) {
   // Regular expression pattern to validate usernames.
   // The pattern checks for the following:
@@ -197,7 +197,7 @@ bool isValidateUsername(String username) {
   return regex.hasMatch(username);
 }
 
-// Function to check if the given string is a valid credit card CVV (Card Verification Value).
+/// Function to check if the given string is a valid credit card CVV (Card Verification Value).
 bool isValidateCreditCardCVV(String cvv) {
   // Regular expression pattern to validate credit card CVV.
   // The pattern checks for the following:
@@ -211,7 +211,7 @@ bool isValidateCreditCardCVV(String cvv) {
   return regex.hasMatch(cvv);
 }
 
-// Function to check if the given string is a valid numeric value (integer or decimal).
+/// Function to check if the given string is a valid numeric value (integer or decimal).
 bool isValidateNumeric(String input) {
   // Regular expression pattern to validate numeric values.
   // The pattern checks for the following:
@@ -227,7 +227,7 @@ bool isValidateNumeric(String input) {
   return regex.hasMatch(input);
 }
 
-// Function to check if the given string is a Fully Qualified Domain Name (FQDN).
+/// Function to check if the given string is a Fully Qualified Domain Name (FQDN).
 bool isFQDN(String str) {
   // Regular expression pattern to validate FQDN.
   // The pattern checks for the following:
@@ -242,7 +242,7 @@ bool isFQDN(String str) {
   return regex.hasMatch(str);
 }
 
-// Function to check if the given string is a valid IP address (IPv4 or IPv6).
+/// Function to check if the given string is a valid IP address (IPv4 or IPv6).
 bool isIP(String str, {int? version}) {
   // Regular expression patterns to validate IPv4 and IPv6 addresses.
   const ipv4Pattern = r'^(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$';
@@ -265,7 +265,7 @@ bool isIP(String str, {int? version}) {
   }
 }
 
-// Function to check if the given string contains only alphabetic characters (letters).
+/// Function to check if the given string contains only alphabetic characters (letters).
 bool isAlpha(String str) {
   // Regular expression pattern to validate alphabetic characters.
   // The pattern allows both uppercase and lowercase letters.
@@ -278,7 +278,7 @@ bool isAlpha(String str) {
   return regex.hasMatch(str);
 }
 
-// Function to check if the given string contains only numeric characters.
+/// Function to check if the given string contains only numeric characters.
 bool isNumeric(String str) {
   // Regular expression pattern to validate numeric characters.
   const pattern = r'^[0-9]+$';
@@ -290,7 +290,7 @@ bool isNumeric(String str) {
   return regex.hasMatch(str);
 }
 
-// Function to check if the given string contains only alphanumeric characters.
+/// Function to check if the given string contains only alphanumeric characters.
 bool isAlphanumeric(String str) {
   // Regular expression pattern to validate alphanumeric characters.
   // The pattern allows both uppercase and lowercase letters and digits.
@@ -303,7 +303,7 @@ bool isAlphanumeric(String str) {
   return regex.hasMatch(str);
 }
 
-// Function to check if the given string is a valid Base64-encoded string.
+/// Function to check if the given string is a valid Base64-encoded string.
 bool isBase64(String str) {
   // Regular expression pattern to validate Base64-encoded strings.
   // The pattern allows valid Base64 characters with optional padding characters.
@@ -317,7 +317,7 @@ bool isBase64(String str) {
   return regex.hasMatch(str);
 }
 
-// Function to check if the given string contains only hexadecimal characters (0-9, A-F, a-f).
+/// Function to check if the given string contains only hexadecimal characters (0-9, A-F, a-f).
 bool isHexadecimal(String str) {
   // Regular expression pattern to validate hexadecimal characters.
   // The pattern allows both uppercase and lowercase hexadecimal characters.
@@ -330,7 +330,7 @@ bool isHexadecimal(String str) {
   return regex.hasMatch(str);
 }
 
-// Function to check if the given string is a valid hexadecimal color representation.
+/// Function to check if the given string is a valid hexadecimal color representation.
 bool isHexColor(String str) {
   // Regular expression pattern to validate hexadecimal color representations.
   // The pattern allows both 3-digit and 6-digit hexadecimal color codes, with or without the '#' symbol.
@@ -343,7 +343,7 @@ bool isHexColor(String str) {
   return regex.hasMatch(str);
 }
 
-// Function to check if the given string contains only lowercase alphabetic characters.
+/// Function to check if the given string contains only lowercase alphabetic characters.
 bool isLowercase(String str) {
   // Regular expression pattern to validate lowercase alphabetic characters.
   const pattern = r'^[a-z]+$';
@@ -355,7 +355,7 @@ bool isLowercase(String str) {
   return regex.hasMatch(str);
 }
 
-// Function to check if the given string contains only uppercase alphabetic characters.
+/// Function to check if the given string contains only uppercase alphabetic characters.
 bool isUppercase(String str) {
   // Regular expression pattern to validate uppercase alphabetic characters.
   const pattern = r'^[A-Z]+$';
@@ -367,7 +367,7 @@ bool isUppercase(String str) {
   return regex.hasMatch(str);
 }
 
-// Function to check if the given string represents an integer number.
+/// Function to check if the given string represents an integer number.
 bool isInt(String str) {
   // Regular expression pattern to validate integer numbers.
   // The pattern allows an optional negative sign followed by one or more digits.
@@ -380,10 +380,11 @@ bool isInt(String str) {
   return regex.hasMatch(str);
 }
 
-// Function to check if the given string represents a floating-point number.
+/// Function to check if the given string represents a floating-point number.
 bool isFloat(String str) {
   // Regular expression pattern to validate floating-point numbers.
-  // The pattern allows an optional negative sign followed by one or more digits, and an optional decimal point with one or more digits.
+  // The pattern allows an optional negative sign followed by one or more digits,
+  // and an optional decimal point with one or more digits.
   const pattern = r'^-?\d+(\.\d+)?$';
 
   // Create a RegExp object with the defined pattern.
@@ -393,7 +394,7 @@ bool isFloat(String str) {
   return regex.hasMatch(str);
 }
 
-// Function to check if the given string is divisible by the specified number.
+/// Function to check if the given string is divisible by the specified number.
 bool isDivisibleBy(String str, int number) {
   // Regular expression pattern to validate integer numbers.
   const pattern = r'^-?\d+$';
@@ -408,7 +409,7 @@ bool isDivisibleBy(String str, int number) {
   return int.parse(str) % number == 0;
 }
 
-// Function to check if the given GST number is valid.
+/// Function to check if the given GST number is valid.
 bool isGSTNumberValid(String gstNumber) {
   // GST number should be 15 characters long
   if (gstNumber.length != 15) {
@@ -438,7 +439,7 @@ bool isGSTNumberValid(String gstNumber) {
   return true;
 }
 
-// Function to check if the given string is a valid URL.
+/// Function to check if the given string is a valid URL.
 bool isURL(String? str,
     {List<String?> protocols = const ['http', 'https', 'ftp'],
     bool requireTld = true,
@@ -526,7 +527,7 @@ bool isURL(String? str,
   return true;
 }
 
-// Function to check if the given string is a valid UUID (Universally Unique Identifier).
+/// Function to check if the given string is a valid UUID (Universally Unique Identifier).
 bool isUUID(String? str, [dynamic version]) {
   final pattern = RegExp(
     // Regular expression pattern to validate UUIDs based on the specified version.
@@ -537,7 +538,7 @@ bool isUUID(String? str, [dynamic version]) {
   return pattern.hasMatch(str ?? '');
 }
 
-// Function to check if the given string is a valid JSON string.
+/// Function to check if the given string is a valid JSON string.
 bool isJson(String str) {
   try {
     // Attempt to decode the input string as JSON using `json.decode`.
@@ -550,14 +551,14 @@ bool isJson(String str) {
   return true;
 }
 
-// Function to check if the given string contains only ASCII characters.
+/// Function to check if the given string contains only ASCII characters.
 bool isAscii(String str) {
   final ascii = RegExp(r'^[\x00-\x7F]+$');
   // Check if the input string matches the ASCII pattern using the RegExp object.
   return ascii.hasMatch(str);
 }
 
-// Function to check if the given string is equal to the provided comparison object.
+/// Function to check if the given string is equal to the provided comparison object.
 bool equals(String str, Object? comparison) {
   // Convert the comparison object to a string using `toString()`.
   // Then, compare the resulting string with the input string `str`.
@@ -565,14 +566,14 @@ bool equals(String str, Object? comparison) {
   return str == comparison.toString();
 }
 
-// Function to check if the given string contains the specified substring.
+/// Function to check if the given string contains the specified substring.
 bool contains(String str, String substring) {
   // Use the `contains` method of the string class to check if `str` contains `substring`.
   // The function returns true if the substring is found, otherwise, it returns false.
   return str.contains(substring);
 }
 
-// Function to check if the given string matches the specified pattern using regular expressions.
+/// Function to check if the given string matches the specified pattern using regular expressions.
 bool matches(String str, String pattern) {
   // Create a `RegExp` object with the provided pattern.
   RegExp re = RegExp(pattern);
@@ -581,7 +582,7 @@ bool matches(String str, String pattern) {
   return re.hasMatch(str);
 }
 
-// Function to check if the given value is a valid International Mobile Equipment Identity (IMEI) number.
+/// Function to check if the given value is a valid International Mobile Equipment Identity (IMEI) number.
 bool isValidIMEI(String value) {
   // Check if the value is null or empty, in which case it is not a valid IMEI.
   if (value.isEmpty) {
@@ -611,7 +612,7 @@ bool isValidIMEI(String value) {
   return sum % 10 == 0;
 }
 
-// Function to check if the given value is a valid Media Access Control (MAC) address.
+/// Function to check if the given value is a valid Media Access Control (MAC) address.
 bool isValidMACAddress(String value) {
   // Check if the value is null or empty, in which case it is not a valid MAC address.
   if (value.isEmpty) {
@@ -625,7 +626,7 @@ bool isValidMACAddress(String value) {
   return macRegex.hasMatch(value);
 }
 
-// Function to check if the given value is a valid Multipurpose Internet Mail Extensions (MIME) type.
+/// Function to check if the given value is a valid Multipurpose Internet Mail Extensions (MIME) type.
 bool isValidMimeType(String value) {
   // Check if the value is null or empty, in which case it is not a valid MIME type.
   if (value.isEmpty) {

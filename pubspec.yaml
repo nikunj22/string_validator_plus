@@ -1,7 +1,10 @@
 name: string_validator_plus
 description: Simplify data validation in Flutter apps! Validate emails, passwords, and more. Intuitive interface, accurate validation. Download now!
-version: 0.0.4
-homepage: https://github.com/nikunj22/string_validator_plus
+version: 0.0.7
+homepage: https://iamnikunjdev.netlify.app/
+repository: https://github.com/nikunj22/string_validator_plus
+issue_tracker: https://github.com/nikunj22/string_validator_plus/issues
+
 
 environment:
   sdk: '>=3.0.6 <4.0.0'

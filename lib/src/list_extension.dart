@@ -1,37 +1,37 @@
-//Check if a List is Empty:
+/// Extension for checking if a list is empty.
 extension ListIsEmptyExtension<T> on List<T> {
-  // The extension getter 'isEmptyList' is added to the 'List' class.
-  // It provides a convenient way to check if a list is empty.
-
+  /// Checks if this list is empty.
+  ///
+  /// Returns `true` if this list is empty, and `false` otherwise.
+  ///
+  /// This getter simply returns the result of the 'isEmpty' property of the list.
   bool get isEmptyList => isEmpty;
 // The 'get' keyword defines a getter method that returns a boolean value.
-
-// The getter simply returns the result of the 'isEmpty' property of the list.
 // If the list is empty, it returns true, otherwise, it returns false.
 }
 
-//Remove Duplicates from a List:
+/// Extension for removing duplicates from a list.
 extension ListRemoveDuplicatesExtension<T> on List<T> {
-  // The extension method 'removeDuplicates' is added to the 'List' class.
-  // It removes duplicate elements from the list and returns a new list with unique elements.
-
+  /// Removes duplicate elements from this list.
+  ///
+  /// Returns a new list containing only the unique elements in the same order as they appear in this list.
+  ///
+  /// This method uses the 'toSet' method to convert the list into a set, which automatically removes duplicates.
+  /// Then, it uses the 'toList' method to convert the set back into a list with unique elements.
   List<T> removeDuplicates() => toSet().toList();
 // The method definition begins with the 'List<T>' return type, indicating that
 // this method will return a new list with unique elements of type 'T'.
-
-// The 'toSet' method is used to convert the list into a set, which automatically removes duplicates.
-// The 'toList' method is used to convert the set back into a list with unique elements.
 }
 
-//Shuffle the Elements of a List:
+/// Extension for shuffling the elements of a list.
 extension ListShuffleExtension<T> on List<T> {
-  // The extension method 'shuffle' is added to the 'List' class.
-  // It shuffles the elements of the list randomly and returns a new shuffled list.
-
+  /// Shuffles the elements of this list randomly.
+  ///
+  /// Returns a new list with the elements randomly reordered.
+  ///
+  /// This method creates a new list 'list' by copying all elements from this list using 'List.from'.
+  /// Then, it calls the 'shuffle' method on the new list, which randomly reorders the elements.
   List shuffle() {
-    // The method definition begins with the 'List' return type, indicating that
-    // this method will return a new list with the elements shuffled.
-
     var list = List.from(this);
     // A new list 'list' is created by copying all elements from the original list using 'List.from'.
 

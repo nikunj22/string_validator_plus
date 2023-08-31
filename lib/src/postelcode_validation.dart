@@ -1,4 +1,6 @@
-// Postal Code Validation (India)
+/// Validates an Indian postal code.
+///
+/// Returns an error message if the postal code is invalid, null otherwise.
 String? validateIndianPostalCode(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -18,7 +20,9 @@ String? validateIndianPostalCode(String? value) {
   return null;
 }
 
-// ZIP Code Validation (United States)
+/// Validates a United States ZIP code.
+///
+/// Returns an error message if the ZIP code is invalid, null otherwise.
 String? validateUSZipCode(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -38,7 +42,9 @@ String? validateUSZipCode(String? value) {
   return null;
 }
 
-// Postal Code Validation (Canada)
+/// Validates a Canadian postal code.
+///
+/// Returns an error message if the postal code is invalid, null otherwise.
 String? validateCanadianPostalCode(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {

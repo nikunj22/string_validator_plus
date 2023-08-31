@@ -14,3 +14,15 @@
 ## 0.0.4
 
 - Updated Description.
+
+## 0.0.5
+
+- Updated Description.
+
+## 0.0.6
+
+- Updated Description.
+
+## 0.0.7
+
+- Proper Dart Docs Description.

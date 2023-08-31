@@ -1,159 +1,116 @@
 import 'dart:math';
 
-//Trim Leading and Trailing Whitespace:
+/// Trim Leading and Trailing Whitespace
 extension StringTrimExtension on String {
-  // The extension method 'trimWhitespace' is added to the 'String' class.
-  // It allows trimming leading and trailing whitespace from a string.
-
-  // The method definition begins with the 'String' return type, indicating that
-  // this method will return a modified string after trimming whitespace.
+  /// This extension method, 'trimWhitespace', allows trimming leading and trailing whitespace from a string.
   String trimWhitespace() => trim();
 // The 'trim()' method is called on the string to remove any leading and trailing whitespace.
 // The trimmed string is then returned.
 }
 
-//Capitalize First Letter:
+/// Capitalize First Letter
 extension StringCapitalizeExtension on String {
-  // The extension method 'capitalizeFirstLetter' is added to the 'String' class.
-  // It capitalizes the first letter of the string.
-
+  /// This extension method, 'capitalizeFirstLetter', capitalizes the first letter of the string.
   String capitalizeFirstLetter() {
-    // The method definition begins with the 'String' return type, indicating that
-    // this method will return a new string with the first letter capitalized.
-
-    // The 'isEmpty' property is checked to handle the case of an empty string.
-    return isEmpty ? this : '${this[0].toUpperCase()}${substring(1)}';
     // If the string is empty, the method returns the same empty string.
     // Otherwise, it creates a new string with the first character capitalized using 'toUpperCase()',
     // and appends the rest of the original string starting from the second character using 'substring(1)'.
+    return isEmpty ? this : '${this[0].toUpperCase()}${substring(1)}';
   }
 }
 
-//Convert to Title Case:
+/// Convert to Title Case
 extension StringTitleCaseExtension on String {
-  // The extension method 'toTitleCase' is added to the 'String' class.
-  // It converts the string to title case, where the first letter of each word is capitalized.
-
+  /// This extension method, 'toTitleCase', converts the string to title case, where the first letter of each word is capitalized.
   String toTitleCase() {
-    // The method definition begins with the 'String' return type, indicating that
-    // this method will return a new string converted to title case.
-
-    // The 'isEmpty' property is checked to handle the case of an empty string.
-    return isEmpty
-        ? this
-        : split(' ').map((word) => word.capitalizeFirstLetter()).join(' ');
     // If the string is empty, the method returns the same empty string.
     // Otherwise, the string is split into individual words using 'split(' ')',
     // and 'map()' is used to apply 'capitalizeFirstLetter()' on each word.
     // Finally, 'join(' ') is used to concatenate the words back into a single string with space between them.
+    return isEmpty
+        ? this
+        : split(' ').map((word) => word.capitalizeFirstLetter()).join(' ');
   }
 }
 
-//Replace All Occurrences:
+/// Replace All Occurrences
 extension StringReplaceAllExtension on String {
-  // The extension method 'replaceAllOccurrences' is added to the 'String' class.
-  // It replaces all occurrences of a specified substring 'from' with another string 'to'.
-
+  /// This extension method, 'replaceAllOccurrences', replaces all occurrences of a specified substring 'from' with another string 'to'.
   String replaceAllOccurrences(String from, String to) {
-    // The method definition begins with the 'String' return type, indicating that
-    // this method will return a new string with all occurrences replaced.
-
-    return replaceAll(from, to);
     // The 'replaceAll' method is used to replace all occurrences of the substring 'from' with 'to'.
+    return replaceAll(from, to);
   }
 }
 
-//Check if a String Contains Only Digits:
+/// Check if a String Contains Only Digits
 extension StringIsDigitsExtension on String {
-  // The extension method 'containsOnlyDigits' is added to the 'String' class.
-  // It checks if the string contains only digits.
-
+  /// This extension method, 'containsOnlyDigits', checks if the string contains only digits.
   bool containsOnlyDigits() {
-    // The method definition begins with the 'bool' return type, indicating that
-    // this method will return a boolean value (true or false).
-
-    return isEmpty ? false : int.tryParse(this) != null;
     // If the string is empty, it is considered as not containing only digits.
     // Otherwise, 'int.tryParse()' is used to attempt parsing the string as an integer.
     // If the parsing is successful, it means the string contains only digits and returns true.
     // Otherwise, it returns false, indicating that the string contains non-digit characters.
+    return isEmpty ? false : int.tryParse(this) != null;
   }
 }
 
-//Check if a String Contains Only Letters:
+/// Check if a String Contains Only Letters
 extension StringIsLettersExtension on String {
-  // The extension method 'containsOnlyLetters' is added to the 'String' class.
-  // It checks if the string contains only letters (alphabets).
-
+  /// This extension method, 'containsOnlyLetters', checks if the string contains only letters (alphabets).
   bool containsOnlyLetters() {
-    // The method definition begins with the 'bool' return type, indicating that
-    // this method will return a boolean value (true or false).
-
-    return isEmpty ? false : RegExp(r'^[A-Za-z]+$').hasMatch(this);
     // If the string is empty, it is considered as not containing only letters.
     // Otherwise, 'RegExp' is used to create a regular expression pattern that matches only alphabets.
     // The 'hasMatch()' method is used to check if the entire string matches the pattern.
     // If it matches, it returns true, indicating that the string contains only letters.
     // Otherwise, it returns false, indicating that the string contains non-letter characters.
+    return isEmpty ? false : RegExp(r'^[A-Za-z]+$').hasMatch(this);
   }
 }
 
-//Reverse a String:
+/// Reverse a String
 extension StringReverseExtension on String {
-  // The extension method 'reverse' is added to the 'String' class.
-  // It reverses the characters in the string and returns the reversed string.
-
+  /// This extension method, 'reverse', reverses the characters in the string and returns the reversed string.
   String reverse() {
-    // The method definition begins with the 'String' return type, indicating that
-    // this method will return a new string with the characters reversed.
-
-    return split('').reversed.join();
     // The 'split' method is used to convert the string into a list of characters.
     // The 'reversed' method is used to reverse the order of the characters in the list.
     // The 'join' method is used to join the characters back into a single string.
+    return split('').reversed.join();
   }
 }
 
-//Count Occurrences of a Substring:
+/// Count Occurrences of a Substring
 extension StringCountOccurrencesExtension on String {
-  // The extension method 'countOccurrences' is added to the 'String' class.
-  // It counts the occurrences of a specified substring within the string.
-
+  /// This extension method, 'countOccurrences', counts the occurrences of a specified substring within the string.
   int countOccurrences(String substring) {
-    // The method definition begins with the 'int' return type, indicating that
-    // this method will return an integer value representing the count of occurrences.
-
-    return isEmpty ? 0 : split(substring).length - 1;
     // If the string is empty, it returns 0 since there are no occurrences.
     // Otherwise, 'split' method is used to split the string into a list of substrings using the given 'substring'.
     // The length of the list minus 1 gives the count of occurrences of the 'substring'.
+    return isEmpty ? 0 : split(substring).length - 1;
   }
 }
 
-//Check if a String is Palindrome:
+/// Check if a String is Palindrome
 extension StringIsPalindromeExtension on String {
-  // The extension method 'isPalindrome' is added to the 'String' class.
-  // It checks if the string is a palindrome, which means it reads the same backward as forward.
-
+  /// This extension method, 'isPalindrome', checks if the string is a palindrome, which means it reads the same backward as forward.
   bool isPalindrome() {
-    // The method definition begins with the 'bool' return type, indicating that
-    // this method will return a boolean value (true or false).
-
-    return this == split('').reversed.join();
     // It compares the original string with the reversed version of the string.
     // If both are the same, it means the string is a palindrome, and it returns true.
     // Otherwise, it returns false, indicating that the string is not a palindrome.
+    return this == split('').reversed.join();
   }
 }
 
-//make sensitive information masked.
+/// Mask Sensitive Information
 extension StringExtensions on String {
+  /// This extension method, 'maskSensitiveInformation', masks sensitive information in the string.
+  /// It keeps a specified number of visible characters at the end while masking the rest with asterisks.
   String maskSensitiveInformation() {
     if (isEmpty) {
       return '';
     }
 
-    const int visibleChars = 4; // Number of visible characters at the end
+    // Number of visible characters at the end
+    const int visibleChars = 4;
 
     // Determine the number of characters to mask (excluding visibleChars)
     final int maskedChars = length - visibleChars;
@@ -176,10 +133,15 @@ extension StringExtensions on String {
   }
 }
 
-//Generated Random String
+/// Random String Generator
 extension RandomStringGenerator on String {
   static final Random _random = Random();
 
+  /// Generates a random string of the given [length] containing alphanumeric characters.
+  ///
+  /// [length]: The length of the random string to generate.
+  ///
+  /// Returns the generated random string.
   static String generateRandomString(int length) {
     const String chars =
         'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -189,12 +151,10 @@ extension RandomStringGenerator on String {
   }
 }
 
-// Check if an Integer is a Valid Credit Card Number:
+/// Check if an Integer is a Valid Credit Card Number
 extension IntIsCreditCardNumberExtension on int {
+  /// Checks if the integer is a valid credit card number using the Luhn algorithm.
   bool get isCreditCardNumber {
-    // The extension getter 'isCreditCardNumber' is added to the 'int' class.
-    // It checks if the integer is a valid credit card number using the Luhn algorithm.
-
     String numberString = toString();
     // Convert the integer to a string representation.
 
@@ -220,14 +180,12 @@ extension IntIsCreditCardNumberExtension on int {
   }
 }
 
-// Identify Type of Credit Card:
+/// Identify Type of Credit Card
 enum CreditCardType { visa, mastercard, amex, discover, other }
 
 extension IntCreditCardTypeExtension on int {
+  /// Identifies the type of credit card based on the starting digits of the credit card number.
   CreditCardType get creditCardType {
-    // The extension getter 'creditCardType' is added to the 'int' class.
-    // It identifies the type of credit card based on the starting digits of the credit card number.
-
     String numberString = toString();
     // Convert the integer to a string representation.
 
@@ -245,12 +203,10 @@ extension IntCreditCardTypeExtension on int {
   }
 }
 
-// Check if an Integer is a Valid CVV Number:
+/// Check if an Integer is a Valid CVV Number
 extension IntIsCVVNumberExtension on int {
+  /// Checks if the integer is a valid CVV (Card Verification Value) number.
   bool get isCVVNumber {
-    // The extension getter 'isCVVNumber' is added to the 'int' class.
-    // It checks if the integer is a valid CVV (Card Verification Value) number.
-
     String cvvString = toString();
     // Convert the integer to a string representation.
 

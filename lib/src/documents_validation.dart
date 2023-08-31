@@ -1,4 +1,7 @@
-// Validate GST Number
+/// Validates a GST (Goods and Services Tax) number.
+///
+/// Returns an error message if the input value is empty, null, not 15 characters long,
+/// or does not match the GST number pattern, otherwise returns null.
 String? validateGSTNumber(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -30,7 +33,11 @@ String? validateGSTNumber(String? value) {
   return null;
 }
 
-// Validate Aadhaar Card Number
+/// Validates an Aadhaar card number.
+///
+/// Returns an error message if the input value is empty, null, or does not match
+/// the pattern for an Aadhaar card number, which should be exactly 12 digits long,
+/// otherwise returns null.
 String? validateAadhaarCard(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -50,7 +57,11 @@ String? validateAadhaarCard(String? value) {
   return null;
 }
 
-// Validate PAN Card Number
+/// Validates a PAN (Permanent Account Number) card number.
+///
+/// Returns an error message if the input value is empty, null, or does not match
+/// the pattern for a PAN card number, which should consist of five uppercase letters,
+/// followed by four digits, and ending with one uppercase letter.
 String? validatePANCard(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -73,7 +84,11 @@ String? validatePANCard(String? value) {
   return null;
 }
 
-// Validate Passport Number
+/// Validates a passport number.
+///
+/// Returns an error message if the input value is empty, null, or does not match
+/// the pattern for a passport number, which should be between 6 to 9 characters long,
+/// consisting of uppercase letters and/or digits.
 String? validatePassportNumber(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -93,7 +108,10 @@ String? validatePassportNumber(String? value) {
   return null;
 }
 
-// Detect Credit Card Type
+/// Detects the type of a credit card based on its number.
+///
+/// Returns the card type (e.g., "Visa", "Mastercard") based on known card number patterns.
+/// If the card type is unknown, it returns "Unknown card type".
 String? detectCreditCardType(String? creditCardNumber) {
   // Check if the input value is null or empty
   if (creditCardNumber == null || creditCardNumber.isEmpty) {
@@ -130,7 +148,10 @@ String? detectCreditCardType(String? creditCardNumber) {
   return "Unknown card type";
 }
 
-// Validate Social Security Number (SSN) - United States
+/// Validates a Social Security Number (SSN) for the United States.
+///
+/// Returns an error message if the input value is empty, null, or does not match
+/// the SSN pattern for the United States, which should be in the format "XXX-XX-XXXX".
 String? validateSSN(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -151,7 +172,10 @@ String? validateSSN(String? value) {
   return null;
 }
 
-// Validate National Insurance Number (NIN) - United Kingdom
+/// Validates a National Insurance Number (NIN) for the United Kingdom.
+///
+/// Returns an error message if the input value is empty, null, or does not match
+/// the NIN pattern for the United Kingdom, which should be in the format "XX-XX-XX-XX-XX".
 String? validateUKNIN(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -172,7 +196,10 @@ String? validateUKNIN(String? value) {
   return null;
 }
 
-// Validate Social Insurance Number (SIN) - Canada
+/// Validates a Social Insurance Number (SIN) for Canada.
+///
+/// Returns an error message if the input value is empty, null, or does not match
+/// the SIN pattern for Canada, which should be in the format "XXX-XXX-XXX".
 String? validateCanadianSIN(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -193,7 +220,10 @@ String? validateCanadianSIN(String? value) {
   return null;
 }
 
-// Validate Tax File Number (TFN) - Australia
+/// Validates a Tax File Number (TFN) for Australia.
+///
+/// Returns an error message if the input value is empty, null, or does not match
+/// the TFN pattern for Australia, which should be in the format "XXX-XXX-XXX".
 String? validateAustralianTFN(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -214,7 +244,10 @@ String? validateAustralianTFN(String? value) {
   return null;
 }
 
-// Validate National Identification Number (NIN) - Nigeria
+/// Validates a National Identification Number (NIN) for Nigeria.
+///
+/// Returns an error message if the input value is empty, null, or does not match
+/// the NIN pattern for Nigeria, which should be in the format "XXX-XXX-XXX".
 String? validateNigerianNIN(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -235,7 +268,10 @@ String? validateNigerianNIN(String? value) {
   return null;
 }
 
-// Validate Identity Card Number (IC) - Malaysia
+/// Validates an Identity Card Number (IC) for Malaysia.
+///
+/// Returns an error message if the input value is empty, null, or does not match
+/// the IC pattern for Malaysia, which should be in the format "XXXXXX-XX-XXXX".
 String? validateMalaysianIC(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -256,7 +292,10 @@ String? validateMalaysianIC(String? value) {
   return null;
 }
 
-// Validate Personal Identification Number (PIN) - South Africa
+/// Validates a Personal Identification Number (PIN) for South Africa.
+///
+/// Returns an error message if the input value is empty, null, or does not match
+/// the PIN pattern for South Africa, which should be a 6-digit PIN number.
 String? validateSouthAfricanPIN(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -276,7 +315,10 @@ String? validateSouthAfricanPIN(String? value) {
   return null;
 }
 
-// Validate National Identification Number (NID) - Bangladesh
+/// Validates a National Identification Number (NID) for Bangladesh.
+///
+/// Returns an error message if the input value is empty, null, or does not match
+/// the NID pattern for Bangladesh, which should be a 13-digit NID number.
 String? validateBangladeshiNID(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -296,7 +338,10 @@ String? validateBangladeshiNID(String? value) {
   return null;
 }
 
-// Validate Social Security Number (NSSN) - Spain
+/// Validates a Spanish Social Security Number (NSSN) for Spain.
+///
+/// Returns an error message if the input value is empty, null, or does not match
+/// the NSSN pattern for Spain, which should be a 12-digit NSSN number.
 String? validateSpanishNSSN(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -316,7 +361,11 @@ String? validateSpanishNSSN(String? value) {
   return null;
 }
 
-// Validate Personal Number (PN) - Sweden
+/// Validates a Swedish Personal Number (PN).
+///
+/// Returns an error message if the input value is empty, null, or does not match
+/// the PN pattern for Sweden, which should be either 10 digits or 10 digits followed
+/// by a hyphen or plus sign and 4 digits (e.g., XXXXXXXXXX or XXXXXXXXX-XXXX or XXXXXXXXX+XXXX).
 String? validateSwedishPN(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -338,15 +387,18 @@ String? validateSwedishPN(String? value) {
   return null;
 }
 
-String maskSensitiveInformation(String input) {
+/// Masks sensitive information in a string by replacing most characters with asterisks,
+/// leaving only the last [visibleChars] characters unmasked.
+///
+/// For example, if [input] is "1234567890" and [visibleChars] is 4, the returned
+/// string will be "******7890".
+String maskSensitiveInformation(String input, {int visibleChars = 4}) {
   if (input.isEmpty) {
     return '';
   }
 
-  const int visibleChars = 4; // Number of visible characters at the end
-
   // Determine the number of characters to mask (excluding visibleChars)
-  final int maskedChars = input.length - visibleChars;
+  final maskedChars = input.length - visibleChars;
 
   // If the input has less than or equal to visibleChars characters, no need to mask
   if (maskedChars <= 0) {

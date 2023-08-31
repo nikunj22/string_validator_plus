@@ -1,4 +1,7 @@
-// Validate generic Driver's License Number
+/// Validates a generic driver's license number.
+///
+/// Returns an error message if the input value is empty, null, or does not match
+/// the pattern for a generic driver's license number, otherwise returns null.
 String? validateDriversLicense(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -18,7 +21,10 @@ String? validateDriversLicense(String? value) {
   return null;
 }
 
-// Validate Indian Driver's License Number
+/// Validates an Indian driver's license number.
+///
+/// Returns an error message if the input value is empty, null, or does not match
+/// the pattern for an Indian driver's license number, otherwise returns null.
 String? validateIndianDriverLicense(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -38,7 +44,10 @@ String? validateIndianDriverLicense(String? value) {
   return null;
 }
 
-// Validate US Driver's License Number
+/// Validates a US driver's license number.
+///
+/// Returns an error message if the input value is empty, null, or does not match
+/// the pattern for a US driver's license number, otherwise returns null.
 String? validateUSDriverLicense(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -58,7 +67,10 @@ String? validateUSDriverLicense(String? value) {
   return null;
 }
 
-// Validate UK Driver's License Number
+/// Validates a UK driver's license number.
+///
+/// Returns an error message if the input value is empty, null, or does not match
+/// the pattern for a UK driver's license number, otherwise returns null.
 String? validateUKDriverLicense(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -78,7 +90,10 @@ String? validateUKDriverLicense(String? value) {
   return null;
 }
 
-// Validate Canadian Driver's License Number
+/// Validates a Canadian driver's license number.
+///
+/// Returns an error message if the input value is empty, null, or does not match
+/// the pattern for a Canadian driver's license number, otherwise returns null.
 String? validateCanadianDriverLicense(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {
@@ -98,7 +113,10 @@ String? validateCanadianDriverLicense(String? value) {
   return null;
 }
 
-// Validate Australian Driver's License Number
+/// Validates an Australian driver's license number.
+///
+/// Returns an error message if the input value is empty, null, or does not match
+/// the pattern for an Australian driver's license number, otherwise returns null.
 String? validateAustralianDriverLicense(String? value) {
   // Check if the input value is null or empty
   if (value == null || value.isEmpty) {

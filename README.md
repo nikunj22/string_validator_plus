@@ -1,162 +1,124 @@
-# string_validator_plus
+# **String Validator Plus**
 
-Simplify data validation in Flutter apps! Validate emails, passwords, and more. Intuitive interface, accurate validation. Download now!
+[![Package Version](https://img.shields.io/pub/v/string_validator_plus.svg)](https://pub.dev/packages/string_validator_plus/versions)
+[![GitHub Stars](https://img.shields.io/github/stars/nikunj22/string_validator_plus.svg?style=social)](https://github.com/nikunj22/string_validator_plus/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/nikunj22/string_validator_plus.svg?style=social)](https://github.com/nikunj22/string_validator_plus/forks)
+[![License](https://img.shields.io/github/license/nikunj22/string_validator_plus.svg)](https://pub.dev/packages/string_validator_plus/license)
 
-## Platform Support
+**Simplify Data Validation in Your Flutter Apps!**
 
-| Platform | Support |
-|----------|---------|
-| Android  | &#10003; |
-| iOS      | &#10003; |
-| Web      | &#10003; |
-| MacOS    | &#10003; |
-| Linux    | &#10003; |
-| Windows  | &#10003; |
+Tired of complex validation logic for emails, passwords, and other data in your Flutter apps? Look no further! String Validator Plus streamlines data validation effortlessly. It offers an intuitive interface and precise validation, making your life as a developer much easier.
 
-## Installation
 
-- Add it as a dependency in their `pubspec.yaml`:
+## **Getting Started**
 
-1. Add the latest version of package to your pubspec.yaml (and run`dart pub get`):
-    ```yaml
-        dependencies:
-          string_validator_plus: ^0.0.4
-    ```
+- To use String Validator Plus, follow these steps:
 
-2. Import the package and use it in your Flutter App.
-    ```dart
-        import 'package:string_validator_plus/string_validator_plus.dart';
-    ```
+1. Add it as a dependency in your pubspec.yaml:
 
-## Example
-
-```
-  final registrationFormKey = GlobalKey<FormState>();
-  TextEditingController _email = TextEditingController();
-  
-  Form(
-          key: loginUserFormKey,
-          child: TextFormField(
-            autovalidateMode: AutovalidateMode.onUserInteraction,
-            controller: _email,
-            validator: validateEmail,
-            onChanged: (value) {
-              setState(() {
-                _email = value;
-              });
-            },
-          ),
-        ),      
-            
+```yaml
+dependencies:
+  string_validator_plus: ^0.0.7
 ```
 
-- You just need to specify the type of validation you need, and you don't need to write much code.
+2. Import the package into your Flutter app:
 
+```dart
+import 'package:string_validator_plus/string_validator_plus.dart';
 ```
 
-  // Example of using string extensions
-  String myString = "flutter toolbox+";
-  String titleCaseString = myString.toTitleCase();
-  
-  if (kDebugMode) {
-    print(titleCaseString);
-  } 
-  // Output: "Flutter Toolbox+"
-        
+## **Example**
+
+Here's a quick example of using String Validator Plus for email validation:
+
+```dart
+final registrationFormKey = GlobalKey<FormState>();
+TextEditingController _email = TextEditingController();
+
+Form(
+  key: loginUserFormKey,
+  child: TextFormField(
+    autovalidateMode: AutovalidateMode.onUserInteraction,
+    controller: _email,
+    validator: validateEmail,
+    onChanged: (value) {
+      setState(() {
+        _email = value;
+      });
+    },
+  ),
+)
 ```
 
-- If you want to use an extension, you just have to add it after your string.
+You can achieve accurate validation with minimal code.
 
-## Key Features
 
-- Email Validation: Seamlessly validate email addresses to ensure correct data entry and avoid invalid inputs.
+## **Key Features**
 
-- Password Validation: Easily verify password strength and security for user authentication, enhancing data protection.
 
-- Confirm Password Validation: Effortlessly match and confirm password entries, providing a seamless user experience.
+String Validator Plus offers a wide range of validation types to cover your needs:
 
-- Different Country Documents Validation: Validate various country-specific documents, ensuring accurate data submission for legal and identity purposes.
+- `Email Validation`: Ensure correct email addresses and prevent invalid inputs.
+- `Password Validation`: Verify password strength and enhance data protection.
+- `Confirm Password Validation`: Easily match and confirm password entries.
+- `Country-Specific Document Validation`: Validate various country-specific documents for legal and     identity purposes.
+- `Mobile Number Validation`: Ensure error-free communication with global users.
+- `Driving License Validation`: Streamline user authentication and comply with regulations.
+- `Postal Code Validation`: Ensure accurate location-based data entry.
+- `Integer Validation`: Validate integers for numerical data accuracy.
+- `List Validation`: Manage data entries effectively and reduce errors in processing.
 
-- Mobile Number Validation: Verify and validate mobile numbers to ensure global user interaction and error-free communication.
 
-- Driving Licence Validation: Validate driving license details for streamlined user authentication and regulatory compliance.
+## **Int Handling Essentials**
 
-- Postal Code Validation: Ensure accurate data entry for location-based information with reliable postal code validation.
+We've also got your integer handling needs covered:
 
-- Integer Validation: Effortlessly check and validate integers for numerical data accuracy, preventing invalid inputs.
+- Calculate Factorial
+- Check If a Number Is Odd or Even
+- Check If an Integer Is Prime
+- Calculate the Greatest Common Divisor (GCD)
+- Check If an Integer Is a Perfect Square
+- Find the Least Common Multiple (LCM)
+- Generate a List of Divisors
+- Check If an Integer Is a Power of Two
+- Convert an Integer to Hexadecimal, Binary, or Octal Representation
+- Check If an Integer Is a Palindrome
+- Find the Number of Digits in an Integer
+- Calculate the Sum of Digits of an Integer
 
-- List Validation: Validate lists to manage data entries effectively, reducing errors in data processing.
 
-## Int Handling Essentials
+## **Text Handling Extensions**
 
-- Find Factorial Extension: Calculate the factorial of an integer with the "factorial" extension for the int class.
+Manipulate text effortlessly with these extensions:
 
-- Check Number is Odd or Even Extension: Conveniently check if an integer is odd or even using the "isEven" and "isOdd" getters for the int class.
+- Trim Leading and Trailing Whitespace
+- Capitalize the First Letter
+- Convert to Title Case
+- Replace All Occurrences
+- Check If a String Contains Only Digits
+- Check If a String Contains Only Letters
+- Reverse a String
+- Count Occurrences of a Substring
+- Check If a String Is a Palindrome
+- Mask Sensitive Information
+- Generate Random Strings
 
-- Check if an Integer is Prime Extension: Easily determine if an integer is a prime number with the "isPrime" getter for the int class.
+## **List Utils+**
 
-- Calculate the Greatest Common Divisor (GCD) Extension: Calculate the GCD of two integers using the "gcd" method for the int class.
+Enhance your list handling capabilities:
 
-- Check if an Integer is a Perfect Square Extension: Check if an integer is a perfect square with the "isPerfectSquare" getter for the int class.
+- Check If a List Is Empty
+- Remove Duplicates from a List
+- Shuffle the Elements of a List
 
-- Find the Least Common Multiple (LCM) Extension: Calculate the LCM of two integers using the "lcm" method for the int class.
+## **Why Choose String Validator Plus?**
 
-- Generate a List of Divisors Extension: Generate a list of all divisors of an integer using the "divisors" getter for the int class.
+- `Comprehensive`: Cover a wide range of validation types with a single package, eliminating the need for multiple dependencies.
 
-- Check if an Integer is a Power of Two Extension: Determine if an integer is a power of two with the "isPowerOfTwo" getter for the int class.
+- `Intuitive Interface`: Designed with developers in mind, it's easy to integrate into your Flutter projects.
 
-- Convert an Integer to Hexadecimal Representation Extension: Convert an integer to its hexadecimal representation with the "toHexadecimalString" method for the int class.
+- `Error Reduction`: Say goodbye to manual validation errors. String Validator Plus automates the process, improving data accuracy.
 
-- Convert an Integer to Binary Representation Extension: Convert an integer to its binary representation with the "toBinaryString" method for the int class.
+- `Regular Updates`: We're committed to keeping the package up-to-date with the latest Flutter trends and best practices.
 
-- Convert an Integer to Octal Representation Extension: Convert an integer to its octal representation with the "toOctalString" method for the int class.
-
-- Check if an Integer is a Palindrome Extension: Determine if an integer is a palindrome (reads the same backward as forward) with the "isPalindrome" getter for the int class.
-
-- Find the Number of Digits in an Integer Extension: Calculate the number of digits in an integer with the "numberOfDigits" getter for the int class.
-
-- Calculate the Sum of Digits of an Integer Extension: Find the sum of the digits in an integer with the "sumOfDigits" getter for the int class.
-
-## Text Handling Extensions
-
-- Trim Leading and Trailing Whitespace Extension: Easily trim leading and trailing whitespace from a string with the "trimWhitespace" extension for the String class.
-
-- Capitalize First Letter Extension: Capitalize the first letter of a string effortlessly using the "capitalizeFirstLetter" extension for the String class.
-
-- Convert to Title Case Extension: Convert a string to title case, where the first letter of each word is capitalized, with the "toTitleCase" extension for the String class.
-
-- Replace All Occurrences Extension: Replace all occurrences of a specified substring with another string using the "replaceAllOccurrences" extension for the String class.
-
-- Check if a String Contains Only Digits Extension: Determine if a string contains only digits with the "containsOnlyDigits" extension for the String class.
-
-- Check if a String Contains Only Letters Extension: Check if a string contains only letters (alphabets) using the "containsOnlyLetters" extension for the String class.
-
-- Reverse a String Extension: Effortlessly reverse the characters in a string with the "reverse" extension for the String class.
-
-- Count Occurrences of a Substring Extension: Count the occurrences of a specified substring within a string using the "countOccurrences" extension for the String class.
-
-- Check if a String is Palindrome Extension: Determine if a string is a palindrome (reads the same backward as forward) using the "isPalindrome" extension for the String class.
-
-- Mask Sensitive Information Extension: Protect sensitive information like credit card numbers or passwords by masking characters with the "maskSensitiveInformation" extension for the String class.
-
-- Generate Random Strings Extension: Create random strings of specified lengths for various use cases like token generation using the "generateRandomString" extension for the String class.
-
-## List Utils+
-
-- Check if a List is Empty Extension: Easily check if a list is empty with the "isEmptyList" getter for the List class.
-
-- Remove Duplicates from a List Extension: Remove duplicate elements from a list and obtain a new list with unique elements using the "removeDuplicates" method for the List class.
-
-- Shuffle the Elements of a List Extension: Shuffle the elements of a list randomly and get a new shuffled list using the "shuffle" method for the List class.
-
-## Why Choose string_validator_plus?
-
-- Comprehensive: Covering a wide range of validation types, string_validator_plus serves as an all-in-one solution for your validation needs, reducing the need for multiple packages.
-
-- Intuitive Interface: Designed with developers in mind, it offers an easy-to-use interface for seamless integration into your Flutter projects.
-
-- Error Reduction: Say goodbye to manual validation errors, as string_validator_plus automates the process with reliability, improving data accuracy.
-
-- Regular Updates: We are committed to providing regular updates and improvements to ensure the package stays up-to-date with the latest Flutter trends and best practices.
-
-There are many string functions, the extension is still listed above the description, and all introductions are not written, so please check everything after installing the package.
+- Don't miss out on the power and simplicity of String Validator Plus. Start using it in your Flutter apps today and experience the difference in data validation!
